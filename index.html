@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tulsi Rani | Portfolio</title>
+
+<style>
+:root{
+  --primary:#0f172a;
+  --secondary:#1e293b;
+  --accent:#f59e0b;
+  --text:#334155;
+  --white:#ffffff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body{
+  background:#e5e7eb;
+  color:var(--text);
+}
+
+/* ===== HEADER ===== */
+header{
+  background:var(--primary);
+  padding:18px;
+  text-align:center;
+  position:sticky;
+  top:0;
+}
+
+header button{
+  background:transparent;
+  color:#fff;
+  border:1px solid var(--accent);
+  padding:8px 14px;
+  margin:5px;
+  border-radius:20px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+header button:hover{
+  background:var(--accent);
+  color:#000;
+}
+
+/* ===== SECTIONS ===== */
+section{
+  display:none;
+  max-width:900px;
+  margin:30px auto;
+  background:var(--white);
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+section.active{
+  display:block;
+}
+
+h2{
+  color:var(--primary);
+  border-left:5px solid var(--accent);
+  padding-left:10px;
+  margin-bottom:15px;
+}
+
+p{
+  line-height:1.7;
+}
+
+ul{
+  margin-left:20px;
+  line-height:1.8;
+}
+
+/* ===== PROJECT CARDS ===== */
+.project{
+  background:#f8fafc;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:20px;
+  border-left:4px solid var(--accent);
+}
+
+/* ===== LINKS ===== */
+a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:var(--secondary);
+  color:#fff;
+  text-align:center;
+  padding:15px;
+  margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <button onclick="show('all')">ALL</button>
+  <button onclick="show('about')">ABOUT</button>
+  <button onclick="show('resume')">RESUME</button>
+  <button onclick="show('skills')">SKILLS</button>
+  <button onclick="show('projects')">PROJECTS</button>
+  <button onclick="show('certificate')">CERTIFICATE</button>
+  <button onclick="show('contact')">CONTACT</button>
+</header>
+
+<section id="about" class="active">
+  <h2>About Me</h2>
+  <p>
+    I am a passionate student with a strong interest in technology and web development.
+    I enjoy learning new skills and working on practical projects that help me improve my knowledge.
+    I focus on writing clean code, building user-friendly websites, and growing step by step as a developer.
+    My goal is to gain experience and build meaningful projects.
+  </p>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <p><strong>BCA Student</strong> | Aspiring Software & Web Developer</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>Java (Basics)</li>
+    <li>Data Structures & Algorithms (Basics)</li>
+    <li>Python</li>
+    <li>MySQL & SQL</li>
+    <li>Computer Networking</li>
+    <li>Operating System</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Student Learning Website</h3>
+    <p><strong>Objective:</strong> Online learning platform for students.</p>
+    <ul>
+      <li>User Registration & Login</li>
+      <li>Course Enrollment</li>
+      <li>Study Material Access</li>
+      <li>Progress Tracking</li>
+    </ul>
+    <p><strong>Tech:</strong> HTML, CSS, JS, PHP/Node, MySQL</p>
+  </div>
+
+  <div class="project">
+    <h3>Hotel Management System</h3>
+    <p><strong>Objective:</strong> Automates hotel operations.</p>
+    <ul>
+      <li>Room & Booking Management</li>
+      <li>Billing System</li>
+      <li>Customer Records</li>
+      <li>Reports</li>
+    </ul>
+    <p><strong>Tech:</strong> HTML, CSS, JS, Python / PHP, MySQL</p>
+  </div>
+</section>
+
+<section id="certificate">
+  <h2>Certificates</h2>
+  <p>Certificates will be added soon.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:ranit6842@gmail.com">ranit6842@gmail.com</a></p>
+  <p>Phone: 7840820338</p>
+  <p>GitHub: <a href="https://github.com/Tulsi56672" target="_blank">github.com/Tulsi56672</a></p>
+  <p>LinkedIn: <a href="https://in.linkedin.com/in/tulsi-rani-a734922a0" target="_blank">LinkedIn Profile</a></p>
+</section>
+
+<footer>
+  <p>© 2026 Tulsi Rani | Professional Portfolio</p>
+</footer>
+
+<script>
+function show(id){
+  const sections=document.querySelectorAll("section");
+  sections.forEach(sec=>sec.classList.remove("active"));
+
+  if(id==="all"){
+    sections.forEach(sec=>sec.classList.add("active"));
+  }else{
+    document.getElementById(id).classList.add("active");
+  }
+}
+</script>
+
+</body>
+</html>
